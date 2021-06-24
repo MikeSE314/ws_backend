@@ -5,7 +5,6 @@ const router = express.Router()
 
 router.post('/login', (req, res, next) => {
   req.session.user = { name: req.body.name }
-  console.log(req.session.user)
   res.send(req.session.user)
 })
 

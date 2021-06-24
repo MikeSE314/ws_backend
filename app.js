@@ -10,6 +10,7 @@ const session = require('express-session')
 
 const indexRouter = require('./routes/index')
 const authRouter = require('./routes/auth')
+const uploadRouter = require('./routes/upload')
 
 const app = express()
 
@@ -28,6 +29,7 @@ app.use(sessionParser)
 
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
+app.use('/upload', uploadRouter)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
