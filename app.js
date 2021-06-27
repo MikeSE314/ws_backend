@@ -16,7 +16,7 @@ const app = express()
 
 const sessionParser = session({
   saveUninitialized: false,
-  secret: '$eCuRiTy',
+  secret: process.env.SESSION_SECRET,
   resave: false
 })
 
